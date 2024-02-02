@@ -3,7 +3,7 @@
     "name": "lab3_eindwerk",
     "slug": "lab3_eindwerk",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "landscape",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
