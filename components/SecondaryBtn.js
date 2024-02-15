@@ -1,5 +1,6 @@
 import react from "react";
 import {Text, StyleSheet, TouchableOpacity } from 'react-native';
+import colors from '../constants/colors';
 
 const SecondaryBtn = ({text, onPress}) => {
     return (
@@ -11,15 +12,15 @@ const SecondaryBtn = ({text, onPress}) => {
 
 const styles = StyleSheet.create({
     btn: {
-        backgroundColor: '#F8F7F3',
-        borderColor: '#5553CC',
+        backgroundColor: colors.offwhite,
+        borderColor: colors.purple,
         borderWidth: 4,
         padding: 16,
         borderRadius: 8,
         overflow: 'hidden',
       },
       buttonText: {
-        color: '#5553CC',
+        color: colors.purple,
         fontSize: 18,
         fontWeight: 'bold',
         textAlign: 'center',
