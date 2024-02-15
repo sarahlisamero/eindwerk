@@ -1,7 +1,8 @@
 // LoginScreen.js
-
 import React, { useState } from 'react';
 import { View, Image, Text, TextInput, Button, StyleSheet, TouchableOpacity } from 'react-native';
+import DefaultBtn from '../components/DefaultBtn';
+import SecondaryBtn from '../components/SecondaryBtn';
 
 const LoginScreen = ({ navigation }) => {
 
@@ -40,10 +41,7 @@ const LoginScreen = ({ navigation }) => {
             value={password}
             onChangeText={(text) => setPassword(text)}
         />
-        <TouchableOpacity 
-            style={styles.btn} onPress={handleLogin}>
-            <Text style={styles.buttonText}>Aanmelden</Text>
-        </TouchableOpacity>
+        <DefaultBtn onPress={handleLogin} text="Aanmelden" />
         </View>
   </View>
   );
@@ -88,7 +86,7 @@ const styles = StyleSheet.create({
       borderRadius: 8,
       backgroundColor: '#f5f5f5',
     },
-    btn: {
+    /*btn: {
       backgroundColor: '#5553CC',
       padding: 16,
       borderRadius: 8,
@@ -99,7 +97,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
         textAlign: 'center',
-    },
+    },*/
   });
 
 export default LoginScreen;
