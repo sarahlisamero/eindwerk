@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { View, Image, Text, TextInput, Button, StyleSheet, TouchableOpacity } from 'react-native';
 import DefaultBtn from '../components/DefaultBtn';
-import SecondaryBtn from '../components/SecondaryBtn';
+import Input from '../components/Input';
 
 const LoginScreen = ({ navigation }) => {
 
@@ -28,19 +28,20 @@ const LoginScreen = ({ navigation }) => {
         <View style={styles.logoContainer}>
             <Image source={require('../assets/logo.webp')} style={styles.logo}/>
         </View>
-        <TextInput
-            style={styles.input}
+        <Input
+            label="Gebruikersnaam"
             placeholder="Gebruikersnaam"
             value={username}
             onChangeText={(text) => setUsername(text)}
         />
-        <TextInput
-            style={styles.input}
+        <Input 
+            label="Wachtwoord" 
             placeholder="Wachtwoord"
             secureTextEntry
-            value={password}
-            onChangeText={(text) => setPassword(text)}
+            value={password} 
+            onChangeText={(text) => setPassword(text)} 
         />
+       
         <DefaultBtn onPress={handleLogin} text="Aanmelden" />
         </View>
   </View>
@@ -66,12 +67,12 @@ const styles = StyleSheet.create({
     },
     logoContainer: {
         marginBottom: 16,
-      },
-      logo: {
-        width: '100%',
-        height: 150, // Adjust the height as needed
-        resizeMode: 'contain',
-      },
+    },
+    logo: {
+      width: '100%',
+      height: 150, 
+      resizeMode: 'contain',
+    },
     textContainer: {
       width: '35%',
     },
@@ -79,25 +80,6 @@ const styles = StyleSheet.create({
       fontSize: 24,
       fontWeight: 'bold',
     },
-    input: {
-      height: 40,
-      marginBottom: 12,
-      paddingHorizontal: 20,
-      borderRadius: 8,
-      backgroundColor: '#f5f5f5',
-    },
-    /*btn: {
-      backgroundColor: '#5553CC',
-      padding: 16,
-      borderRadius: 8,
-      overflow: 'hidden',
-    },
-    buttonText: {
-        color: 'white',
-        fontSize: 18,
-        fontWeight: 'bold',
-        textAlign: 'center',
-    },*/
   });
 
 export default LoginScreen;
