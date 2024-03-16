@@ -13,12 +13,14 @@ const Input = (properties) => {
 
 const styles = StyleSheet.create({
     input: {
+        fontFamily: 'Quicksand_400Regular',
         marginBottom: 24,
         padding:12,
         borderRadius: 8,
         backgroundColor: colors.offwhite,
     },
     label: {
+        fontFamily: 'Quicksand_500Medium',
         fontWeight: 'bold',
         marginBottom: 8,
     },
