@@ -22,22 +22,8 @@ export function useCustomFonts() {
     Quicksand_600SemiBold,
     Quicksand_700Bold,
   });
-
 }
 
 
-// import { useFonts } from 'expo-font';
 
-// export function useCustomFonts() {
-//   return useFonts({
-//     FredokaOne: require('../assets/fonts/FredokaOne-Regular.ttf'),
-//     QuicksandRegular: require('../assets/fonts/Quicksand-Regular.ttf'),
-//     QuicksandBold: require('../assets/fonts/Quicksand-Bold.ttf'),
-//     QuicksandMedium: require('../assets/fonts/Quicksand-Medium.ttf'),
-//     QuicksandLight: require('../assets/fonts/Quicksand-Light.ttf'),
-//     QuicksandSemiBold: require('../assets/fonts/Quicksand-SemiBold.ttf'),
-//   });
-// }
-
-// export default useCustomFonts;
 
