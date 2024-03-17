@@ -83,9 +83,9 @@ const styles = StyleSheet.create({
     },
     logoContainer: {
         marginBottom: 8,
-        display: 'flex',
+        /*display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'center',*/
     },
     logo: {
       width: '90%',

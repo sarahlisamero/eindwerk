@@ -13,7 +13,7 @@ const LoginScreen = ({ navigation }) => {
 
   const handleLogin = () => {
     if (username === 'gebruiker' && password === 'wachtwoord') {
-      alert('Inloggen geslaagd!');
+      //alert('Inloggen geslaagd!');
       navigation.navigate('Dashboard'); //nog aanmaken!
     } else {
       alert('Inloggen mislukt. Controleer je gebruikersnaam en wachtwoord.');
@@ -118,9 +118,9 @@ const styles = StyleSheet.create({
     },
     logoContainer: {
       marginBottom: 16,
-      display: 'flex',
+      /*display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'center',*/
     },
     logo: {
       width: '90%',
