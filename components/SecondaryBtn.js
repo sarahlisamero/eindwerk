@@ -15,9 +15,10 @@ const styles = StyleSheet.create({
         backgroundColor: colors.offwhite,
         borderColor: colors.purple,
         borderWidth: 4,
-        padding: 16,
+        padding: 10,
         borderRadius: 8,
         overflow: 'hidden',
+        marginBottom: 20,
       },
       buttonText: {
         color: colors.purple,

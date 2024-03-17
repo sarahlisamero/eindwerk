@@ -13,9 +13,10 @@ const DefaultBtn = ({text, onPress}) => {
 const styles = StyleSheet.create({
     btn: {
         backgroundColor: colors.purple,
-        padding: 16,
+        padding: 12,
         borderRadius: 8,
         overflow: 'hidden',
+        marginBottom: 20,
       },
       buttonText: {
         color: colors.offwhite,

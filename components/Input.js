@@ -14,7 +14,7 @@ const Input = (properties) => {
 const styles = StyleSheet.create({
     input: {
         fontFamily: 'Quicksand_400Regular',
-        marginBottom: 24,
+        marginBottom: 20,
         padding:12,
         borderRadius: 8,
         backgroundColor: colors.offwhite,
