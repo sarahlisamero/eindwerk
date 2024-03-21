@@ -4,6 +4,7 @@ import { View, Image, Text, TextInput, Button, StyleSheet, TouchableOpacity } fr
 import { IP_ADDRESS } from '../config';
 const ip = IP_ADDRESS;
 /*import { AsyncStorage } from 'react-native';*/
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import DefaultBtn from '../components/DefaultBtn';
 import Input from '../components/Input';
 import colors from '../constants/colors';
@@ -31,9 +32,10 @@ const LoginScreen = ({ navigation }) => {
         throw new Error(errorData.message);
       }
 
-      /*const data = await response.json();
+      const data = await response.json();
       const token = data.token;
-      await AsyncStorage.setItem('token', token);*/
+      console.log('Token:', token);
+      await AsyncStorage.setItem('token', token);
       navigation.navigate('Register');
     } catch (error){
       console.error('Login failed:', error); 
