@@ -1,6 +1,8 @@
 // LoginScreen.js
 import React, { useState } from 'react';
 import { View, Image, Text, TextInput, Button, StyleSheet, TouchableOpacity } from 'react-native';
+import { IP_ADDRESS } from '../config';
+const ip = IP_ADDRESS;
 /*import { AsyncStorage } from 'react-native';*/
 import DefaultBtn from '../components/DefaultBtn';
 import Input from '../components/Input';
@@ -11,18 +13,9 @@ const LoginScreen = ({ navigation }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
-    if (username === 'gebruiker' && password === 'wachtwoord') {
-      //alert('Inloggen geslaagd!');
-      navigation.navigate('Dashboard'); //nog aanmaken!
-    } else {
-      alert('Inloggen mislukt. Controleer je gebruikersnaam en wachtwoord.');
-    }
-  };
-  /* current error - login failed: network request failed
     const handleLogin = async () => {
     try{
-      const response = await fetch('http://localhost:3000/api/v1/parents/login', {
+      const response = await fetch(`http://${ip}:3000/api/v1/parents/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -38,19 +31,15 @@ const LoginScreen = ({ navigation }) => {
         throw new Error(errorData.message);
       }
 
-      const data = await response.json();
+      /*const data = await response.json();
       const token = data.token;
-      await AsyncStorage.setItem('token', token);
-      navigation.navigate('Dashboard');
+      await AsyncStorage.setItem('token', token);*/
+      navigation.navigate('Register');
     } catch (error){
       console.error('Login failed:', error); 
     }
   };
-  */ 
 
-  /*<View style={styles.imageContainer}>
-            <Image source={require('../assets/defaultAvatar.webp')} style={styles.image} />
-        </View>*/
   return (
     <View style={styles.container}>
       <View style={styles.leftHalfBackground} />
