@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from './screens/Login';
 import RegisterScreen from './screens/Register';
+import DashboardScreen from './screens/Dashboard';
 import { useCustomFonts } from './constants/fonts'; // Ensure to import the function correctly
 
 const Stack = createStackNavigator();
@@ -26,6 +27,11 @@ export default function App() {
         <Stack.Screen
           name="Register"
           component={RegisterScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Dashboard"
+          component={DashboardScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

@@ -33,10 +33,15 @@ const LoginScreen = ({ navigation }) => {
       }
 
       const data = await response.json();
+      console.log('Login data:', data);
       const token = data.token;
       console.log('Token:', token);
       await AsyncStorage.setItem('token', token);
-      navigation.navigate('Register');
+      /*navigation.navigate('Dashboard',{ token: token });*/
+      const parentid = data.parentid;
+      console.log('Parent ID:', parentid);
+      await AsyncStorage.setItem('parentid', parentid);
+      navigation.navigate('Dashboard');
     } catch (error){
       console.error('Login failed:', error); 
     }
